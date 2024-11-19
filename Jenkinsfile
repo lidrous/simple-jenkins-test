@@ -11,11 +11,13 @@ pipeline {
 
         stage('Run Script') {
             steps {
+                echo 'Running a simple test script...'
                 sh '''
                     echo "Hello from Jenkins Pipeline!"
-                    echo "Testing GitHub Integration"
+                    echo "GitHub integration works!"
                 '''
             }
         }
     }
 }
+
