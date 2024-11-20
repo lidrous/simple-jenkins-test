@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-jenkins-test
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-jenkins-test
+  template:
+    metadata:
+      labels:
+        app: simple-jenkins-test
+    spec:
+      containers:
+      - name: simple-jenkins-test
+        image: nginx:latest
+        ports:
+        - containerPort: 80
