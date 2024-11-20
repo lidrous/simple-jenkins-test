@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: your-dockerhub-username/flask-app:latest  # Replace with your DockerHub image
+        image: lidrous/flask-app:latest
         ports:
         - containerPort: 5000
