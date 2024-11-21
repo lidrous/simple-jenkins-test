@@ -6,8 +6,9 @@ metadata:
 spec:
   selector:
     app: flask-app
+  type: NodePort
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 5000
-  type: ClusterIP
+    - protocol: TCP
+      port: 80         # Port exposed within the cluster
+      targetPort: 5000 # Port your Flask app listens on
+      nodePort: 30007  # Optional: Specify the NodePort (or let Kubernetes assign one)
