@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: ${DOCKER_IMAGE}:latest
+        image: lidrous/flask-app:latest
         ports:
         - containerPort: 5000
